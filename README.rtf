@@ -1,0 +1,32 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1404\cocoasubrtf470
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset0 AppleColorEmoji;}
+{\colortbl;\red255\green255\blue255;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 # \uc0\u55357 \u57080  3D Autonomous Drone Navigation via Pure NumPy Double DQN\
+\
+An advanced 3D Drone simulation and continuous trajectory control system utilizing **Deep Reinforcement Learning (Double DQN)** built entirely from scratch using pure **Python and NumPy** for mathematical backpropagation, and **PyVista** for high-fidelity tactical terrain visualization.\
+\
+## 
+\f1 \uc0\u55357 \u57056 \u65039 
+\f0  Core Engineering Features\
+- **Pure NumPy Architecture:** Fully custom neural network layers, loss calculations, and weight updates without relying on PyTorch or TensorFlow.\
+- **Tactical Terrain Scaling:** Simulation environment trained on an ultra-dense $5\\text\{ km\}^2$ tactical terrain grid ($2.23\\text\{ km\} \\times 2.23\\text\{ km\}$ zone) derived from US-Japanese satellite imagery datasets.\
+- **Continuous Quadratic Reward Function:** Engineered to stabilize high-frequency numerical shocks and ensure cinematic flight stability over rigid topographies:\
+  $$R = -2.0 \\cdot (e_\{\\text\{next\}\})^2 + 15.0 \\cdot \\Delta e$$\
+- **Proactive 3D Navigation:** Implemented a continuous predictive warning buffer (4.0m to 6.5m LiDAR clearance) enabling the agent to anticipate and smoothly climb over rising obstacles.\
+\
+## 
+\f1 \uc0\u55356 \u57263 
+\f0  Convergence & Results\
+The agent successfully achieved convergence after a rigorous background training loop of **2,000 episodes** with accelerated epsilon decay ($\\epsilon \\to 0.01$). \
+\
+The optimized continuous policy weight core is fully exported and available in `dqn_weights.pkl`.\
+\
+## 
+\f1 \uc0\u55357 \u56550 
+\f0  File Structure\
+- `drone_agent.py`: Main simulation and Double DQN training script.\
+- `dqn_weights.pkl`: Saved optimal weights after 2,000 convergence episodes.\
+- `requirements.txt`: Project dependencies.}
