@@ -1,5 +1,11 @@
 # 3D Drone Navigation using Double DQN (Pure NumPy)
 
+## 🗺️ Evolution & Terrain Updates
+This project is an advanced iteration of my previous drone simulation work. 
+* **Previous Version**: Built for an older terrain model. You can check the initial repository here: [Link to your old repo].
+* **Current Version**: Upgraded to handle real-world 3D satellite digital elevation data (`output_AW3D30.tif`), featuring enhanced collision avoidance and a more robust Double DQN training loop.
+
+
 A lightweight, memory-efficient 3D Drone Autonomous Navigation system built from scratch using **Pure NumPy**. This project implements a Deep Reinforcement Learning (Double DQN) agent to navigate complex 3D grid terrains while avoiding collisions, optimized specifically to run efficiently on low-resource hardware.
 
 ## 🚀 Why Pure NumPy? (Hardware-Constrained Design)
