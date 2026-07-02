@@ -1,0 +1,26 @@
+# 3D Drone Navigation using Double DQN (Pure NumPy)
+
+A lightweight, memory-efficient 3D Drone Autonomous Navigation system built from scratch using **Pure NumPy**. This project implements a Deep Reinforcement Learning (Double DQN) agent to navigate complex 3D grid terrains while avoiding collisions, optimized specifically to run efficiently on low-resource hardware.
+
+## 🚀 Why Pure NumPy? (Hardware-Constrained Design)
+Instead of relying on heavy frameworks like PyTorch or TensorFlow which demand high computing power, this project leverages **Pure NumPy** for all matrix operations, neural network layers, forward/backward propagation, and reward calculations. This architectural choice ensures that the complete simulation and training loop can run smoothly on standard, non-GPU laptops.
+
+## 🛠️ Project Architecture & Workflow
+This project was developed through a highly iterative, step-by-step AI-assisted engineering process, balancing pure logical debugging with resource constraints.
+
+* **`ddqn_agent.py`**: Contains the core logic of the Double Deep Q-Network built entirely with mathematical matrix operations from scratch.
+* **`Drone-agent-3D.py`**: The main simulation environment managing the 3D grid, drone kinematics, physics constraints, and reward functions.
+* **`ddqn_weights.pkl`**: Pre-trained model weights saved after stable convergence.
+* **`output_AW3D30.tif`**: Real-world satellite digital elevation data used to generate the 3D terrain.
+
+## 📊 Core Features & Reward Engineering
+* **Collision Avoidance**: The agent receives a heavy penalty for hitting the terrain boundaries or the ground.
+* **Target Navigation**: Positive rewards are granted as the agent minimizes its Euclidean distance to the 3D destination.
+* **Step-by-Step Debugging**: Developed with careful code tracking, error-handling, and custom-built lightweight math functions.
+
+## 💻 How to Run
+Ensure you have `numpy` and `rasterio`/`pyvista` (for terrain processing) installed:
+
+```bash
+pip install numpy rasterio
+python Drone-agent-3D.py
